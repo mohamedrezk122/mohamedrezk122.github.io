@@ -16,6 +16,7 @@ social:
 - {icon: 'github',     link: 'https://github.com/mohamedrezk122'}
 - {icon: 'twitter',    link: 'https://twitter.com/rezk1222'}
 - {icon: 'linkedin',   link: 'https://www.linkedin.com/in/mohamed-m-rezk/'}
+- {icon: 'facebook',   link: 'https://www.facebook.com/mohrizq895/'}
 # - {icon: 'envelope',   link: '2002114@eng.asu.edu.eg@gmail.com'}
 
 # Customize site text
@@ -27,4 +28,4 @@ pagination:
 
 related_posts: 'You may also enjoy:'
 
-post_date_prefix: 'Written on'
+post_date_prefix: ''

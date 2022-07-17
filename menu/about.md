@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: Welcome to The Computation Side of Things!
 permalink: /about
 ---
 

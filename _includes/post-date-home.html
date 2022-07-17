@@ -1,13 +1,5 @@
-<span class="post-date">
-    <i class="fa fa-user"></i>
-  {% if page.author %}
-    {{ page.author }}
-  {% else %}
-    {{ site.author }}
-  {% endif %}
-  |
+<span class="post-date-home">
   {{ site.data.settings.post_date_prefix }}
-  <i style="font-size:19px" class="fa">&#xf073;</i>
   {% assign d = page.date | date: "%-d"  %}
   {{ page.date | date: "%B" }}
   {% case d %}
@@ -16,6 +8,10 @@
     {% when '3' or '23' %}{{ d }}rd
     {% else %}{{ d }}th{% endcase %},
   {{ page.date | date: "%Y" }}
-
+  by
+  {% if page.author %}
+    {{ page.author }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
 </span>
-

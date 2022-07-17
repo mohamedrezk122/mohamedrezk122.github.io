@@ -3,8 +3,11 @@ layout: post
 title:  "Diffusion Equation: a computational approach"
 author: "Mohamed Rezk"
 image: cover.png
+show_excerpts: true
 excerpt_separator: <!--more-->
 categories: documentation
+excerpt: My little journey in solving, computing, and simulating
+ diffusion equation with simple approaches and in a fun way.
 ---
 <!--more-->
 My little journey in solving, computing, and simulating
@@ -250,14 +253,11 @@ So, what we have to do is just adding some particles to the screen and let them 
 </div>
 
 
-<figure class="video_container" style="text-align:center">
+<!-- <figure class="is-fullwidth" style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QI2wF5Yuxsg/showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
-
-
-
-
-
+ -->
+[Jump to the Simulation (youtube video)](https://www.youtube.com/embed/QI2wF5Yuxsg/showinfo=0)
 
 **3D case**
 

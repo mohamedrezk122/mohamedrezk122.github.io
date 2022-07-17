@@ -7,12 +7,18 @@ body {
   font-size: 20px;
   color: $body-color;
   line-height: 1.75rem;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: $elements-responsive-width) {
   body {
     font-size: 14px;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
+
   }
   body h1 {
     font-size: 1.5rem;
@@ -33,7 +39,7 @@ h1 a {
 h2{
   
   padding-bottom:8px;
-  border-bottom: 2px solid #e6e6e6 ; 
+  border-bottom: 1px solid #e6e6e6 ; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,7 +54,7 @@ a {
 }
 
 a:hover {
-  color: $link-color;
+  color: #e55a5c;
   border-bottom: none;
 }
 
@@ -69,6 +75,35 @@ blockquote {
 hr {
   border-top: 1px solid $extra-light-gray-color;
 }
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+  @extend %clearfix;
+
+  @media screen and (min-width: $on-large) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+  }
+}
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 /*
   Tables

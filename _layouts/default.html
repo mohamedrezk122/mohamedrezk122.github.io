@@ -1,13 +1,19 @@
 <!doctype html>
-<html>
-  {% include head.html %}
+
+  {%- include head.html -%}
+
   <body>
-    <div class="container">
-      {% include header.html %}
-      <div class="content-container">
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
         {{ content }}
       </div>
-      {% include footer.html %}
-    </div>
+    </main>
+
+    {%- include footer.html -%}
+
   </body>
+
 </html>

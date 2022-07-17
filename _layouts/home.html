@@ -4,17 +4,17 @@ layout: default
 
 {% for post in paginator.posts %}
   <div class="posts-container">
-    <h1>
+    <h3>
       <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-    </h1>
-    {% if post.image %}
+    </h3>
+<!--     {% if post.image %}
       <div class="thumbnail-container">
         <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
       </div>
-    {% endif %}
+    {% endif %} -->
     <p>
       {{ post.content | strip_html | truncate: 80 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-      <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+      <span class="post-date-home"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
     </p>
   </div>
 {% endfor %}
@@ -32,7 +32,7 @@ layout: default
   {% endif %}
 </div>
 
-<ul>
+<!-- <ul>
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
@@ -40,3 +40,4 @@ layout: default
     </li>
   {% endfor %}
 </ul>
+ -->

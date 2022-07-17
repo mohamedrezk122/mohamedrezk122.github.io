@@ -5,7 +5,17 @@
 .post-date {
   display: block;
   margin-top:3px;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 0px;
+  color: $light-gray-color;
+  font-family: $sans-serif-font-family;
+  font-size:0.9rem;
+}
+
+.post-date-home {
+  display: block;
+  margin-top:3px;
+  margin-bottom: 0px;
   color: $light-gray-color;
   font-family: $sans-serif-font-family;
   font-size:0.8rem;
