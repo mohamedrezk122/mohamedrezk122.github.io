@@ -13,7 +13,7 @@ layout: default
       </div>
     {% endif %}
     <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+      {{ post.content | strip_html | truncate: 80 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
       <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
     </p>
   </div>
@@ -31,3 +31,12 @@ layout: default
     <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
   {% endif %}
 </div>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

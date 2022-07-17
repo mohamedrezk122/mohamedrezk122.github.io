@@ -5,7 +5,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 615px;
+  width: 950px;
 }
 
 .content-container {
@@ -16,7 +16,7 @@
 
 @media (max-width: $container-responsive-width) {
   .container {
-    width: 90vw;
+    width: 60vw;
   }
 }
 
@@ -36,9 +36,10 @@
 }
 
 .header-title a {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-decoration: none;
-  color: $body-color;
+  color: black;
+  //font-family: 'Noe Display'
 }
 
 .header-subtitle {
