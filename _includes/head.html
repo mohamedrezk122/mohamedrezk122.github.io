@@ -29,7 +29,9 @@
       });
   </script>
   <!-- Google Analytics -->
-  {% include google-analytics.html %}
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include analytics.html %}
+  {% endif %}
   <!-- Use Jekyll SEO plugin -->
   {% seo %}
 </head>
