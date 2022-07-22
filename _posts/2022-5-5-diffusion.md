@@ -22,7 +22,7 @@ My little journey in solving, computing, and simulating
 
 ## Motivation 
 
-Recently, I have been watching The Office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant (to) the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
+Recently, I have been watching The Office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant **to** the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\d1.png" />

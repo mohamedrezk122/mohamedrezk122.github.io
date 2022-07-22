@@ -3,8 +3,8 @@ disqus:
   comments: false
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
-# If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: G-7NBSBNJPXW
+# # If you are not using Google Analytics, please change 'google-ID' to an empty string
+# google-ID: G-7NBSBNJPXW
 
 menu:
 - {name: 'Posts', url: 'posts.html'}
