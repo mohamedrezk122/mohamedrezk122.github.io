@@ -20,14 +20,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-    MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-      });
-  </script>
+
+
+  {% include math.html %}
   <!-- Google Analytics -->
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
@@ -35,3 +30,5 @@
   <!-- Use Jekyll SEO plugin -->
   {% seo %}
 </head>
+
+

@@ -20,9 +20,9 @@ My little journey in solving, computing, and simulating
 - Probability
 - Some basic physics.
 
-## Motivation 
+## Motivation
 
-Recently, I have been watching The Office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant (to) the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
+Recently, I have been watching The Office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant **to** the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
 
 <div style="text-align:center">
   <img src="\assets\images\post_1\d1.png" />
@@ -307,7 +307,7 @@ $F_{ext}(t)$ represents the external forces act on the particles.
 
 We are not going to dig further into Langevin model, but we might conclude that both random walk  and Langevin hold and explicitly describe the system; nevertheless, radom walk is more suitable for many-particle system due to the efficient computations involved. On the other hand, Langevin is more appropriate in the case of single particle induced by number of forces, giving us a more of smooth trace.
 
-## References 
+## References
 
 [Grant Sanderson video on diffusion equation](https://www.youtube.com/watch?v=a3V0BJLIo_c)
 
