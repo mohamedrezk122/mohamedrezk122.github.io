@@ -1,6 +1,13 @@
 <header class="header">
   <h1 class="wrapper">
+<!--     <div id="site_title" class="site_title" >
     <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    </div>
+     -->
+      <div id="site_logo" class="site_logo" >
+    <img src="favicon.ico" alt="logo" style="width:10%" />
+    <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    </div>
     <small class="header-subtitle">{{ site.description }}</small>
     {% include menu.html %}
   </h1>

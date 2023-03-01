@@ -8,6 +8,7 @@ google-ID: G-7NBSBNJPXW
 
 menu:
 - {name: 'Posts', url: 'posts.html'}
+# - {name: 'Projects', url: 'docs.html'}
 - {name: 'About',   url: 'about.html'}
 
 

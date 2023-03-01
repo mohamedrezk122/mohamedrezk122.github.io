@@ -53,6 +53,20 @@
   color: $light-gray-color;
 }
 
+.site_logo {
+
+  display: flex;
+  align-items: center;
+  justify-content: center
+
+}
+
+.site_logo img {
+  float: left;
+  padding-right: 15px;
+
+}
+
 /*
   Menu
 */
