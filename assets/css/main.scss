@@ -5,6 +5,25 @@
   src: url('http://fonts.cdnfonts.com/css/noe-display');
 }
 
+/* latin */
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/droidserif/v19/tDbI2oqRg1oM3QBjjcaDkOr9rAU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/droidsans/v18/SlGVmQWMvZQIdix7AFxXkHNSbQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
@@ -18,10 +37,78 @@
        url('../fonts/Merriweather/merriweather-v30-latin-regular.svg#Merriweather') format('svg'); /* Legacy iOS */
 }
 
+
+
+@font-face {
+  font-family: 'CMSS';
+  src: url('../fonts/computer-modern/cmunsl.eot');
+  src: url('../fonts/computer-modern/cmunsl.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/computer-modern/cmunsl.woff') format('woff'),
+     url('../fonts/computer-modern/cmunsl.ttf') format('truetype'),
+     url('../fonts/computer-modern/cmunsl.svg#cmunsl') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'CMSS';
+  src: url('../fonts/computer-modern/cmunbl.eot');
+  src: url('../fonts/computer-modern/cmunbl.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/computer-modern/cmunbl.woff') format('woff'),
+     url('../fonts/computer-modern/cmunbl.ttf') format('truetype'),
+     url('../fonts/computer-modern/cmunbl.svg#cmunbl') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+ font-family:'CMS';
+ src:url('../fonts/computer-modern/cmunrm.eot');
+ src:url('../fonts/computer-modern/cmunrm.eot?#iefix') format('embedded-opentype'),
+ url('../fonts/computer-modern/cmunrm.woff') format('woff'),
+ url('../fonts/computer-modern/cmunrm.ttf') format('truetype'),
+ url('../fonts/computer-modern/cmunrm.svg#cmunrm') format('svg');
+ font-weight:normal;
+ font-style:normal
+}
+@font-face {
+ font-family:'CMS';
+ src:url('../fonts/computer-modern/cmunbx.eot');
+ src:url('../fonts/computer-modern/cmunbx.eot?#iefix') format('embedded-opentype'),
+ url('../fonts/computer-modern/cmunbx.woff') format('woff'),
+ url('../fonts/computer-modern/cmunbx.ttf') format('truetype'),
+ url('../fonts/computer-modern/cmunbx.svg#cmunbx') format('svg');
+ font-weight:bold;
+ font-style:normal
+}
+@font-face {
+ font-family:'CMS';
+ src:url('../fonts/computer-modern/cmunti.eot');
+ src:url('../fonts/computer-modern/cmunti.eot?#iefix') format('embedded-opentype'),
+ url('../fonts/computer-modern/cmunti.woff') format('woff'),
+ url('../fonts/computer-modern/cmunti.ttf') format('truetype'),
+ url('../fonts/computer-modern/cmunti.svg#cmunti') format('svg');
+ font-weight:normal;
+ font-style:italic
+}
+@font-face {
+ font-family:'CMS';
+ src:url('../fonts/computer-modern/cmunbi.eot');
+ src:url('../fonts/computer-modern/cmunbi.eot?#iefix') format('embedded-opentype'),
+ url('../fonts/computer-modern/cmunbi.woff') format('woff'),
+ url('../fonts/computer-modern/cmunbi.ttf') format('truetype'),
+ url('../fonts/computer-modern/cmunbi.svg#cmunbi') format('svg');
+ font-weight:bold;
+ font-style:italic
+}
+
+
 $sans-serif-font-family: "Quattrocento Sans", sans-serif;
 $serif-font-family:      "PT Serif", Georgia, "Times New Roman", serif;
 $code-font-family:       "Source Code Pro", monospace;
-
+$latex-like-font-family: "CMS", "Droid Sans", "Helvetica", "Arial", sans-serif;
 $body-color:             #505050;
 $link-color:             black;
 
