@@ -9,7 +9,9 @@ layout: default
       {{ post.excerpt }}
 {%- endif -%}
 {% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+<div style="text-align:center">
+<img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+</div>
 {% endif %}
 <article>
   {{ content }}

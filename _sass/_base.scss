@@ -3,11 +3,11 @@
 */
 
 body {
-  // font-family: $serif-font-family;
-  font-family: $latex-like-font-family;
-  font-size: 20px;
+  font-family: $serif-font-family;
+  // font-family: $latex-like-font-family;
+  font-size: 24px;
   color: $body-color;
-  line-height: 1.75rem;
+  line-height: 2.2rem;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
@@ -126,4 +126,8 @@ table, th, td {
 th, td {
   padding: 15px;
   text-align: left;
+}
+
+.highlight {
+  font-size: 22px;
 }

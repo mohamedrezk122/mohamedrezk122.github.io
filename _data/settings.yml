@@ -7,9 +7,10 @@ disqus:
 google-ID: G-7NBSBNJPXW
 
 menu:
-- {name: 'Posts', url: 'posts.html'}
-# - {name: 'Projects', url: 'docs.html'}
-- {name: 'About',   url: 'about.html'}
+- {name: 'Posts'     , url: 'posts.html'    }
+- {name: 'System'    , url: 'my-system.html'}
+- {name: 'Library'   , url: 'my-library.html'}
+- {name: 'About'     , url: 'about.html'    }
 
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
@@ -18,7 +19,6 @@ social:
 - {icon: 'twitter',    link: 'https://twitter.com/rezk1222'}
 - {icon: 'linkedin',   link: 'https://www.linkedin.com/in/mohamed-m-rezk/'}
 - {icon: 'facebook',   link: 'https://www.facebook.com/mohrizq895/'}
-# - {icon: 'envelope',   link: '2002114@eng.asu.edu.eg@gmail.com'}
 
 # Customize site text
 pagination:
