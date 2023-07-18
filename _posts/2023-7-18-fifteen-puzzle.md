@@ -272,8 +272,11 @@ which can be solved with some iterative algorithm like Newton-Raphson.
 Heuristic functions are generated from the relaxed version of the problem. The relaxation graph is a super-set of the search tree/graph obtained by removing certain constraints from the original problem, like tiles cannot slide over each other. In this case, more edges are being added to the graph, making the process of finding the goal is much easier. For instance, in the generalized ($pq$)-puzzle, if we have two tiles $X$ and $Y$ , we have the following  constraint defined:
 - $X$ can move to $Y$ if $Y$ is a neighbor (horizontal or vertical) to $X$ and $Y$ is blank 
 This can be broken down into 3 relaxed versions as follows,
+
 1 -  $Y$ is adjacent to X , where Y may not be blank 
+
 2 -  $Y$ is blank, where Y may not be adjacent to $X$
+
 3 -  Neither: $X$ can move to Y, where Y may not be blank or adjacent to $X$ 
 
 From these relaxations, we can deduce the heuristic functions . For example, the first case is the **Manhattan distance**, while the second one is called **Gaschnig Heuristic**, and the last relaxation produces the **Hamming distance** or **Misplaced tiles**.  The Hamming distance is the least descriptive heuristic. Gaschnig is at least as good as the Hamming distance, and even can be better than the Manhattan distance, which is  superior.
