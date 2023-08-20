@@ -3,13 +3,11 @@ layout: post
 title:  "The Fifteen Puzzle"
 author: "Mohamed Rezk"
 image: puzzle2.jpg
-show_excerpts: true
-excerpt_separator: <!--more-->
-categories: documentation
+keywords: artificial intelligence,informed search, math puzzles, group theory
 ---
-<!--more-->
+
 Looking at the 15 puzzle from a mathematician and computer scientist scope.
-<!--more-->
+
 ## Prerequisites 
 
 The article is nearly self-contained, but a background in these topics would be certainly helpful:

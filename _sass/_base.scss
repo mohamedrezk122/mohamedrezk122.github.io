@@ -28,17 +28,22 @@ body {
 
 
 h1{
-  font-size: 1.7rem;
+  font-size: 2rem;
+  text-align:center;
 }
 
 
+
+h3 {
+  font-size:1.5rem;
+}
 
 h1 a {
   text-decoration: none;
 }
 
 h2{
-  
+  font-size:1.7rem;
   padding-bottom:8px;
   border-bottom: 1px solid #e6e6e6 ; 
 }
@@ -133,4 +138,25 @@ th, td {
 
 .site-title a{
   font-size : 1.8rem;
+}
+
+.post-date-page{
+  text-align: center;
+  margin:5px;
+}
+
+.post-date-page h5{
+  font-size:.9rem;
+  color:  $light-gray-color;
+  margin:5px;
+}
+
+.post-keywords{
+  text-align: center;
+}
+
+.post-keywords h4{
+  font-size:1.1rem;
+  margin:5px;
+  color: gray;
 }

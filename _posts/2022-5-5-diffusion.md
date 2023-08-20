@@ -3,16 +3,11 @@ layout: post
 title:  "Diffusion Equation: a computational approach"
 author: "Mohamed Rezk"
 image: cover.png
-show_excerpts: true
-excerpt_separator: <!--more-->
-categories: documentation
-excerpt: My little journey in solving, computing, and simulating
- diffusion equation with simple approaches and in a fun way.
+keywords: computational physics, applied math, probability
 ---
-<!--more-->
+
 My little journey in solving, computing, and simulating
  diffusion equation with simple approaches and in a fun way.
-<!--more-->
 
 ## Prerequisites
 
