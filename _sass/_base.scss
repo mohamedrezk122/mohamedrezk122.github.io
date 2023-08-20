@@ -117,6 +117,8 @@ table {
   border-collapse: collapse;
   margin-bottom: 30px;
   width: 100%;
+  overflow: auto; 
+  display:block
 }
 
 table, th, td {
@@ -124,7 +126,7 @@ table, th, td {
 }
 
 th, td {
-  padding: 15px;
+  padding: 5px;
   text-align: left;
 }
 
