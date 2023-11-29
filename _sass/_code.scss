@@ -23,7 +23,8 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: $code-background-color;
+  
+  // background-color: $code-background-color;
 }
 pre code {
   padding: 0;
@@ -69,3 +70,6 @@ pre.highlight {
   background-color: transparent;
   border-radius: 0;
 }
+
+
+

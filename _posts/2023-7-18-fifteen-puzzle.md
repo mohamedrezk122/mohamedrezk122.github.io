@@ -2,13 +2,13 @@
 layout: post
 title:  "The Fifteen Puzzle"
 author: "Mohamed Rezk"
-image: puzzle2.jpg
-keywords: artificial intelligence,informed search, math puzzles, group theory
+image: fifteen-puzzle.webp
+keywords: artificial intelligence, informed search, math puzzles, group theory
 ---
 
 Looking at the 15 puzzle from a mathematician and computer scientist scope.
 
-## Prerequisites 
+## Prerequisites
 
 The article is nearly self-contained, but a background in these topics would be certainly helpful:
 - basic permutation concepts 
@@ -26,13 +26,13 @@ The puzzle was originally invented by **Noyes Palmer Chapman** in 1874, but it w
 The starting state is, all the squares are in the right place except for 14 and 15 being swapped.  The desired  goal is to swap them back, thus returning  every square to its respective place. This why the puzzle is known as  the 14-15 puzzle .  The following two figures can help illustrate the problem definition more meaningfully.
 
 <div style="text-align:center">
-  <img src="\assets\images\post-2\14-15.png" />
+  <img src="\assets\images\post-2\14-15.webp" />
   <div class="caption">Loyd Puzzle</div>
 </div>
 
 Sadly, no one took the prize as the goal is unreachable !  
 
-## Parity Proof 
+## Parity Proof
 
 To determine whether the puzzle is solvable from some initial state to another goal state, we need to develop a mathematical formulation that provides a solid and intuitive analysis.  
 
@@ -102,7 +102,7 @@ To sum up , what is needed to be known just these two facts:
 Enough of abstract algebra;  now we begin solving the puzzle. First, we flatten the board,  commonly known as hot vector.  For example, consider this instance of the puzzle, which is flattened, with the solved/goal state at top and the scrambled one beneath it.  Here is a sample made for the 8 puzzle for simplification: 
 
 <div style="text-align:center">
-  <img src="\assets\images\post-2\flatten.png" />
+  <img src="\assets\images\post-2\flatten.webp" />
   <div class="caption">8-puzzle instance with its flattened version</div>
 </div>
 
@@ -157,7 +157,7 @@ Generalizing the problem let us understand the nature of the computational aspec
 Now, with the interesting part. In this section of the article, we are going to develop a way to solve the puzzle (if is solvable).  As we mentioned in the previous section, we can model the problem as a tree, where each node represents a configuration obtained by swapping the blank square with one of its neighbor tiles.
 
 <div style="text-align:center">
-  <img src="\assets\images\post-2\tree.png" />
+  <img src="\assets\images\post-2\tree.webp" />
   <div class="caption">simple puzzle tree </div>
 </div>
 
@@ -167,7 +167,7 @@ $$\bar{b} = \frac{3 + 2 +4}{3} = 3$$
 
 However, using breadth-first  with highly scrambled puzzle (deeper solution) with a depth 30 will produce a huge number of nodes $O(b^d)$ that the algorithm has to expand before reaching the goal. Additionally, space complexity is so bad with $O(b^d)$. Similar arguments can be made for the rest of uninformed methods. Uninformed search algorithms have no idea about the nodes they are expanding; in other words, they do not know how far the goal is, which make them waste a lot of time and memory in useless nodes. This is where  informed methods come to into play. These algorithms know a little bit about the problem more than just the definition, for example the nature of state space. The problem space can be a grid, a sphere,  or just flat land. With that in mind, we can choose a proper heuristic function that could estimate the how far the goal is from the current node. But shall we choose the algorithm first ? I think you guessed it already, A*.  
 
-### A* Algorithm 
+### A* Algorithm
 
 A* belongs to best-first search algorithms class, which uses an evaluation/cost function $f(n)$ to expand the nodes based on lowest value of $f$. Dijkstra/uniform-cost search uses just the path cost as an evaluation function $f(n) = g(n)$ , and greedy best-first search uses just the heuristic $f(n) = h(n)$. On the other hand, A* uses the combination of both:
 
@@ -208,30 +208,30 @@ $$
 
  Looking at its space complexity, however,  A* is not that memory-efficient as it stores every node in the operation data structure which is usually some implementation of priority queue. The previous behavior is useful in pruning the duplicate nodes; however, the space complexity is going to grow exponentially with the problem description,  $O(b^d)$.  We have to look for another variant with the  completeness and optimality of  A* i.e IDA*. Iterative deepening A* algorithm is very similar to iterative deepening depth-first, except it uses the $f$-values as the bound. Simply, it begins with the heuristic of the root as the bound and  for every child of the root, it explores the grandchildren if the child $f$-value is less than or equal the bound. If this iteration does not find a solution, we update the bound with the minimum $f$-value of the children, and search again.  This can be summarized with the following Wikipedia pseudo-code:
  
-```
-procedure ida_star(root)
-    bound := h(root)
-    path  := [root]
+``` lua
+function ida_star(root)
+    bound = h(root)
+    path  = [root]
     loop
-        t := search(path, 0, bound)
+        t = search(path, 0, bound)
         if t = FOUND then return (path, bound)
-        if t = ∞ then return NOT_FOUND
-        bound := t
+        if t = inf then return NOT_FOUND
+        bound = t
     end loop
-end procedure
+end function
 
 function search(path, g, bound)
-    node := path.last
-    f := g + h(node)
+    node = path.last
+    f = g + h(node)
     if f > bound then return f
     if is_goal(node) then return FOUND
-    min := ∞
+    min = inf
     for succ in successors(node) do
         if succ not in path then
             path.push(succ)
-            t := search(path, g + cost(node, succ), bound)
+            t = search(path, g + cost(node, succ), bound)
             if t = FOUND then return FOUND
-            if t < min then min := t
+            if t < min then min = t
             path.pop()
         end if
     end for
@@ -241,7 +241,7 @@ end function
 
 The advantage in using IDA* is the space complexity is linear with problem description, as it only store the nodes  in the current path, as opposed to the naive A* which additionally stores the unexplored nodes. However, this makes the IDA* algorithm slower as there are many duplicate nodes due to symmetry in the puzzle, which, in turn increases the processing time.    
    
-### Heuristic Assessment 
+### Heuristic Assessment
 
 In order to choose the proper heuristic function, we have to develop a metric to assess the function against. But first, we have to take a closer look at the run time complexity of A* algorithm. The time complexity of A* can be treated the same way BFS $O(b^{\alpha d})$, where $\alpha = 1$ in case of BFS  and $\alpha = \epsilon$  in case of A*  . Luckily, $\epsilon$  has a name, heuristic relative error: 
 
@@ -265,7 +265,7 @@ $$
 
 which can be solved with some iterative algorithm like Newton-Raphson. 
 
-### Heuristic functions 
+### Heuristic functions
 
 Heuristic functions are generated from the relaxed version of the problem. The relaxation graph is a super-set of the search tree/graph obtained by removing certain constraints from the original problem, like tiles cannot slide over each other. In this case, more edges are being added to the graph, making the process of finding the goal is much easier. For instance, in the generalized ($pq$)-puzzle, if we have two tiles $X$ and $Y$ , we have the following  constraint defined:
 - $X$ can move to $Y$ if $Y$ is a neighbor (horizontal or vertical) to $X$ and $Y$ is blank 
@@ -307,7 +307,7 @@ The dramatic speed-up in the execution time is due to non-monotonicity and non-a
 
 For the sake of completeness, I have made a simple Manim visualization.
 <div style="text-align:center">
-  <img src="\assets\images\post-2\demo.gif" />
+  <img src="\assets\images\post-2\demo-opt.gif" />
   <div class="caption">Demo</div>
 </div>
 
@@ -315,7 +315,7 @@ For the sake of completeness, I have made a simple Manim visualization.
 
 As for now, I am satisfied with the heuristic functions and the IDA* algorithm discussed. But from time to time, I will implement algorithms like A* , Bidirectional A* and other variants with different heuristic functions imposed by a correction methods and test different cases. Also, it might be a good idea to implement pattern databases. This might happen in the project GitHub repo, as this article is never intended to serve the implementation this far.
 
-## References 
+## References
 
 **GitHub repo** : [https://github.com/mohamedrezk122/fifteen-puzzle-solver](https://github.com/mohamedrezk122/fifteen-puzzle-solver)
 

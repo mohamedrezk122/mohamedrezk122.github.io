@@ -2,7 +2,7 @@
 layout: post
 title:  "Diffusion Equation: a computational approach"
 author: "Mohamed Rezk"
-image: cover.png
+image: diffusion-cover.webp
 keywords: computational physics, applied math, probability
 ---
 
@@ -20,7 +20,7 @@ My little journey in solving, computing, and simulating
 Recently, I have been watching The Office TV show. In one of the episodes named “Lice”, Dwight Schrute (The assistant **to** the Regional Manager) had an insecticidal grenade, and he hilariously dropped it, and immediately the smoke diffused all over the place. The scene looked a bit fake; however, the way the smoke spread was a kind of catchy, so I had to figure out what is going around.
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\d1.png" />
+  <img src="\assets\images\post-1\dewight.webp" />
   <div class="caption">Dwight Schrute (Photo goes to NBC)</div>
 </div>
 
@@ -57,7 +57,7 @@ At any time step, the particle can jump to the right with  probability $q$ and t
 
 $$q = 1-q  = \frac{1}{2}$$
 
-<div style="text-align:center"><img src="\assets\images\post_1\1.png" /></div>
+<div style="text-align:center"><img src="\assets\images\post-1\1d-random-walk.webp" /></div>
 
 After sometime, the particle made some $k$ jumps to the right and the rest to the left , so the probability of finding  this particle at position $x$ after $N$ jumps can be modeled accuretly by the binomial probability distribution function:
 
@@ -80,10 +80,9 @@ which simply yields:
 $$u(x,N) \approx \frac{1}{\sigma\sqrt{2\pi}} \exp\left[-\frac{(x-\langle x \rangle)^2}{2\sigma^2}\right]$$
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\4.png" />
+  <img src="\assets\images\post-1\gaussian-approximation.webp" />
   <div class="caption">Normal approximation to binomial distribution</div>
 </div>
-
 ## Numerical Solution
 
 For the 1D case, the partial differential equation can be rewritten as :
@@ -149,14 +148,14 @@ $$u_{i}^{n} = u_{i}^{n-1}+ D \Delta t \left(\frac{u_{i+1} - 2u_i+u_{i-1}}{h^2}\r
 Note that $i$ is for spatial step in $x$ , while $n$ is for time step.
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\stencil.png" />
+  <img src="\assets\images\post-1\stencil.webp" />
   <div class="caption">2D (4-point) stencil</div>
 </div>
 
 **Simulation**
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\animation.gif" />
+  <img src="\assets\images\post-1\animation-1d-opt.gif" />
   <div class="caption">1D Diffusion equation Simulation</div>
 </div>
 
@@ -190,7 +189,7 @@ To make things more simple for us, we are going to set $\Delta x = \Delta y$
 Again $i,j$ are for spatial steps in $x$ and $y$ , while $n$ is for time step.
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\stencil22.png" /> 
+  <img src="\assets\images\post-1\stencil-3d.webp" /> 
   <div class="caption">3D (6-point) stencil</div>
 </div>
 
@@ -199,7 +198,7 @@ Again $i,j$ are for spatial steps in $x$ and $y$ , while $n$ is for time step.
 **Simulation**
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\animation2.gif" />
+  <img src="\assets\images\post-1\animation-2d-opt.gif" /> 
   <div class="caption">2D Diffusion equation Simulation</div>
 </div>
 
@@ -243,7 +242,7 @@ $$\theta \in [0,2\pi] \;\;\; \rightarrow  \;\;\; k_{2D} = \cos{\theta}\;\hat{x} 
 So, what we have to do is just adding some particles to the screen and let them spread out, but bare in mind that the internal forces of attraction and gravity are neglected in this model. The initial setup should look like this:
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\sim.png" />
+  <img src="\assets\images\post-1\simulation.webp" />
   <div class="caption">2D particles diffusion Simulation</div>
 </div>
 
@@ -259,7 +258,7 @@ So, what we have to do is just adding some particles to the screen and let them 
 Now we have a bit of a trouble here  generating random coordinates. The common way to do it  is to use the parameters of the spherical coordinate $(\theta,  \phi)$, but the randomized movement vector $k_{3D}$ will not be uniform over the surface of the unit sphere; however, the points will be more dense near the poles and sparse near the equator.
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\sphere.png" />
+  <img src="\assets\images\post-1\sphere.webp" />
   <div class="caption">A non-uniform randomization of points on the surface of sphere</div>
 </div>
 
@@ -274,7 +273,7 @@ $$\gamma = \frac{c}{\sqrt{a^2+b^2+c^2}}$$
 And, we shall get something like this-  amazing, isn't it ?
 
 <div style="text-align:center">
-  <img src="\assets\images\post_1\sphere2.png" />
+  <img src="\assets\images\post-1\sphere-uniform.webp" />
   <div class="caption">A uniform randomization of points on the surface of sphere</div>
 </div>
 
