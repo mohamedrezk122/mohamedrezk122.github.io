@@ -19,26 +19,11 @@ layout: default
     {% endunless %}
     <li itemscope>
       <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+      {%- if post.excerpt -%}
+      <h4> {{ post.excerpt }} </h4> 
+      {%- endif -%}
       <p class="post-date-home"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>
     </li>
   {% endfor %}
 </ul>
 
-
-<ul class="docs-container">
-  {% for post in site.docs %}
-    {% unless doc.next %}
-      <h3>{{ doc.date | date: '%Y' }}</h3>
-    {% else %}
-      {% capture year %}{{ doc.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ doc.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}
-        <h3>{{ doc.date | date: '%Y' }}</h3>
-      {% endif %}
-    {% endunless %}
-    <li itemscope>
-      <a href="{{ site.github.url }}{{ doc.url }}">{{ doc.title }}</a>
-      <p class="doc-date-home"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ doc.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>
-    </li>
-  {% endfor %}
-</ul>

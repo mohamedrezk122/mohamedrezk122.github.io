@@ -1,12 +1,12 @@
 ---
 layout: post
+toc : true 
 title:  "The Fifteen Puzzle"
 author: "Mohamed Rezk"
 image: fifteen-puzzle.webp
 keywords: artificial intelligence, informed search, math puzzles, group theory
+excerpt : Looking at the 15 puzzle from a mathematician and computer scientist scope
 ---
-
-Looking at the 15 puzzle from a mathematician and computer scientist scope.
 
 ## Prerequisites
 
@@ -217,8 +217,8 @@ function ida_star(root)
         if t = FOUND then return (path, bound)
         if t = inf then return NOT_FOUND
         bound = t
-    end loop
-end function
+    end 
+end 
 
 function search(path, g, bound)
     node = path.last
@@ -233,10 +233,10 @@ function search(path, g, bound)
             if t = FOUND then return FOUND
             if t < min then min = t
             path.pop()
-        end if
-    end for
+        end 
+    end 
     return min
-end function
+end 
 ```
 
 The advantage in using IDA* is the space complexity is linear with problem description, as it only store the nodes  in the current path, as opposed to the naive A* which additionally stores the unexplored nodes. However, this makes the IDA* algorithm slower as there are many duplicate nodes due to symmetry in the puzzle, which, in turn increases the processing time.    
@@ -294,11 +294,11 @@ $$
 \end{bmatrix}
 $$
 
-|edit| runtime(s) | neighbor time(s)  | depth  | expanded nodes  |
+|Edit| Runtime(s) | Neighbor<br>time(s)  | Depth  | Expanded Nodes  |
 |---|---|---|---|---|
 |  vanilla |  261.1907 | 130  | 51  |  7,530,405 |
-| with duplicate nodes lookup tables  | 110.2581  |  41.63  | 51  |  7,530,405 |
-|  implementing the static weighted cost function WIDA* with $W_h/W_g=81/19$ |   0.3435|   0.1750 | 165  |  12,536 |
+| with duplicate <br> nodes lookup tables  | 110.2581  |  41.63  | 51  |  7,530,405 |
+|  implementing the static<br> weighted cost function WIDA* with $W_h/W_g=81/19$ |   0.3435|   0.1750 | 165  |  12,536 |
 
 The dramatic speed-up in the execution time is due to non-monotonicity and non-admissibility of the cost function, which in turn, make the algorithm pessimistic, and will not generate the optimal solution but a longer one. The weights can be tweaked to get some trade off between the optimality and runtime.   
 

@@ -8,6 +8,16 @@
   list-style: none;
 }
 
+.posts-container h4 {
+  font-size : 1.2rem ; 
+  font-family:  $body-font ;
+  padding : 0px ; 
+  margin-bottom : 0px ;
+  margin-top: 0px ;
+  color : $body-color;
+  font-weight : normal ; 
+  font-style : normal ;
+}
 .post-card {
   width:260px;
   min-height:370px;

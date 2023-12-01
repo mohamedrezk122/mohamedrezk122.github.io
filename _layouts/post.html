@@ -15,16 +15,31 @@ layout: default
 </div>
 {%- endif -%}
 
-{%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-{%- endif -%}
 {% if page.image %}
 <div style="text-align:center">
 <img src="{{ site.github.url }}/assets/posts-covers/{{ page.image }}">
 </div>
 {% endif %}
+
+{%- if page.excerpt -%}
+      <p></p>
+      {{ page.excerpt }}
+      <p></p>
+{%- endif -%}
+
 <article>
-  {{ content }}
+<div id= article-comps>
+    {%- if page.toc -%}
+    <div id="table-of-contents">
+      <h2> Table of Contents </h2>
+      {% toc %}
+    </div>
+   {%- endif -%}
+
+  <div id="markdown-content">
+    {{ content }}
+  </div>
+</div>
 </article>
 <!-- {% if site.hide_related_posts != true %}
   {% include related-posts.html %}

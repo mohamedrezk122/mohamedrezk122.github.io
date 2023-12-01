@@ -114,7 +114,6 @@
 .footer {
   color: $light-gray-color;
   text-align: center;
-  //margin: 2rem;
   margin-bottom: 0px;
   margin-top: 20px;
 }
@@ -123,6 +122,8 @@
   color: $light-gray-color;
   padding: 10px;
   text-decoration: none;
+  font-size : 1.2rem ;
+  font-family : $body-font ;
 }
 
 .footer a:hover {
