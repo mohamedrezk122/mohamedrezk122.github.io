@@ -33,15 +33,18 @@ layout: default
     <div id="table-of-contents">
       <h2> Table of Contents </h2>
       <!-- {% toc %} -->
-      {{ content | toc }}
+      {% include toc.html html=content %}
     </div>
-    {%- else -%}
+   {%- endif -%}
+
   <div id="markdown-content">
     {{ content }}
   </div>
-   {%- endif -%}
 
 </div>
+
+
+
 </article>
 <!-- {% if site.hide_related_posts != true %}
   {% include related-posts.html %}
