@@ -32,13 +32,15 @@ layout: default
     {%- if page.toc -%}
     <div id="table-of-contents">
       <h2> Table of Contents </h2>
-      {% toc %}
+      <!-- {% toc %} -->
+      {{ content | toc }}
     </div>
-   {%- endif -%}
-
+    {%- else -%}
   <div id="markdown-content">
     {{ content }}
   </div>
+   {%- endif -%}
+
 </div>
 </article>
 <!-- {% if site.hide_related_posts != true %}
