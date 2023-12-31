@@ -237,6 +237,44 @@ td {
   margin:5px;
 }
 
+.album-post-date-page{
+  text-align: center;
+  margin:5px;
+}
+
+.album-post-date-page h5{
+  font-size:.9rem;
+  color:  $light-gray-color;
+  margin:5px;
+}
+
+.album-item {
+  padding-bottom: 0px ;
+  margin: 0px ;
+}
+
+.album-item h2{
+  font-size:1.7rem;
+  padding-bottom:0px;
+  border-bottom: 0px solid #e6e6e6 ; 
+}
+
+.album-title {
+  display: inline-block;
+
+  padding: 0rem .3rem;
+}
+
+.album-date {
+  display: inline-block;
+
+  padding: 0rem .3rem;
+}
+.album-date h3{
+  font-size : 1.2rem ;
+  color: gray; 
+}
+
 .post-keywords{
   text-align: center;
 }
