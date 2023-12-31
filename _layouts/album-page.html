@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<h1>
+  {{ page.title }}
+</h1>
+
+<div class="album-post-date-page">
+{%- if page.date -%}
+  <h5> {{ page.date | date_to_string }} </h5>
+{%- endif -%}
+</div>
+
+<article>
+<div id= article-comps>
+  <div class ="album" id="markdown-content">
+    {{ content }}
+  </div>
+
+</div>
+</article>
