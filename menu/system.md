@@ -3,7 +3,7 @@ layout: post
 title: My OS & System tools
 author : Mohamed Rezk
 permalink: /system
-date: "march,2,2023"
+date: 02-03-2023
 ---
 
 In this post, I am going to list some of the programs and tools I use on daily basis. I use GNU/LINUX as the daily driver operating system. The reason I use such system is about one crucial concept called "Extensibility"; meaning, you can extend your system up to the hardware capability not just what the software vendor offers you, which is the case in Windows-based systems. Also, there are other motives why people might use UNIX-like systems (BSD, LINUX), like security and being open-source, any bug or mis-behaviour can be easily fixed through community contributions, so there is no need to wait for an update. 
