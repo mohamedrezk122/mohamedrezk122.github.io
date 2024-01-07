@@ -7,9 +7,9 @@ layout: default
 </h1>
 
 <ul class="posts-container">
-  {% assign albums = site.pages | sort: 'date' | reverse %}
+  {% assign albums = site.pages | where_exp: "album", "album.layout == 'album-page'" | sort: 'date' | reverse %}
   {% for album in albums %}
-    {% if  album.layout == "album-page" %}
+    <!-- {% if  album.layout == "album-page" %} -->
       <div class='album-item'>
       {% if  album.date %}
         <div class='album-date'>
@@ -22,7 +22,7 @@ layout: default
             </h2>
         </div>
       </div>
-    {% endif %}
+    <!-- {% endif %} -->
   {% endfor %}
 </ul>
 
