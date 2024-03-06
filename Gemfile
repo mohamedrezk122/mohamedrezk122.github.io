@@ -3,3 +3,4 @@ gemspec
 
 gem "webrick", "~> 1.7"
 gem 'jekyll-loading-lazy'
+gem 'jekyll-katex'

@@ -40,3 +40,22 @@
 .related-posts a {
   text-decoration: none;
 }
+
+
+.row {
+  display: flex;
+}
+
+.column{
+  padding: .3rem;
+
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.6rem;
+  padding: .5rem;
+  margin: .5rem;
+  text-align:center;
+
+}
